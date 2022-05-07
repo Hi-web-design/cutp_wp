@@ -31,23 +31,6 @@ function display_title() {
 add_action( 'after_setup_theme', 'display_title' );
 
 
-// テーマ設定
-// function theme_setup(){
-//   // titleタグ
-//   add_theme_support('title-tag');
-
-//   // アイキャッチ画像
-//   add_theme_support('post-thumbnails');
-
-//   // メニュー
-//   register_nav_menus(
-//       array(
-//           'main-menu' => 'メインメニュー',
-//       )
-//   );
-// }
-// add_action('after_setup_theme', 'theme_setup');
-
 function change_posts_per_page($query) {
   if ( is_admin() || ! $query->is_main_query() )
       return;
